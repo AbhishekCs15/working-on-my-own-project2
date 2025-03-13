@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+    {% block title %}
+        welcome
+    {% endblock %}
+
+    {% block content %}
+    <header>
+        <h1 style="padding-top:10px">register to find matching mate</h1>
+    </header>
+      <div class="form">
+        <h2 style="color: red">Fill Details</h2>
+        <form method="post" action="{{ url_for('register') }}">
+        {{ form.csrf_token }}
+        {{ form.name.label}}<br>
+        {{form.name(size=50)}}<br>
+<!--        {% for err in form.email.errors %}-->
+<!--          <span style="color:red">{{err}}</span>-->
+<!--        {% endfor %}-->
+        {{ form.email.label}}<br>
+        {{form.email(size=50)}}<br>
+        {{ form.password.label}}<br>
+        {{form.password(size=50)}}<br>
+        {{ form.phone.label}}<br>
+        {{form.phone(size=50)}}<br>
+        {{ form.submit }}
+        </form>
+
+      </div>
+    {% endblock %}

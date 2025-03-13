@@ -1,0 +1,70 @@
+body{
+    background-image: url('static/images/bg.jpeg');
+    
+}
+header{
+    background-color: #FF6347;
+    height: 100px;
+    align-content: center;
+}
+.form{
+    height: 700px;
+    width: 500px;
+    background-color: gray;
+    margin:20px 500px 0px 500px ; /* top right left*/
+    text-align: center;
+}
+h1{
+    color: pink;
+    text-align: center;
+    margin-bottom: 20px;
+    color: red;
+}
+.hand{
+    height: 500px;
+    position: absolute; /* absolute is used to place image permanently to screen */
+    bottom: 0px; /* Aligns the image at the bottom of the page */
+    clip-path: ellipse(50% 50% at 50% 50%); /* to make image to the oval shape */
+}
+.hand1{
+    height: 500px;
+    position: absolute; /* absolute is used to place image permanently to screen*/
+    bottom: 0; /* Aligns the image at the bottom  of the page using absolute */
+    right:0; /* Aligns the image at the right of the page using absolute */
+    clip-path: ellipse(50% 50% at 50% 50%); /* to make image to the oval shape */
+
+
+}
+.name{
+    color:red;
+    text-align: center;
+    margin-top:20px
+}
+.button1{
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 12px;
+    font-size:16px;
+    background-color: pink;
+}
+.button1:hover{
+    background-color:#FF6347;
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+.ren{
+
+        color: white;
+        margin-left: 500px;
+        margin-top: 50px;
+        font-size: 20px;
+        font-family: 'Caveat', cursive;
+
+}
+.box{
+    border:  solid red;
+    border-width: 2px 1px;
+    height: 20px;
+}
+.name1{
+        margin-left: 20px;
+}

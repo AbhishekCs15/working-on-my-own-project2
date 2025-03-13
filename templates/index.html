@@ -1,0 +1,28 @@
+ {% extends "base.html" %}
+    {% block title %}
+        welcome
+    {% endblock %}
+    {% block content %}
+
+
+        <img class="hand" id="1" src="/static/images/R.jpeg" alt="hand in love">
+        <img class="hand1" id="2" src="/static/images/R.jpeg" alt="hand in love">
+
+
+<!--    <h1>Welcome mate💖!</h1>-->
+
+    <div class="name">
+        <div class="img">
+            <img src="/static/images/img.png" alt="heart image">
+            <div class="find">
+                <h2>Ready to find your matching mate💕?</h2>
+            </div>
+            <div class="button">
+                <form action="{{ url_for('match')}}" method="post">
+                    <button class="button1"  href="{{ url_for('match') }}" type="submit">Lets match</button>
+                </form>
+            </div>
+        </div>
+
+    </div>
+{% endblock %}
