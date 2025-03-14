@@ -13,9 +13,7 @@ class Base(DeclarativeBase):
     pass
 
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///user_registration.db'
-# app.config['SQLALCHEMY_Binds'] = {
-#     'db2': 'sqlite:///user_details .db',
-# }
+
 
 db = SQLAlchemy(model_class=Base)
 db.init_app(app)
@@ -60,9 +58,6 @@ def login():
         email = login_form.email.data
         password = login_form.password.data
         phone = login_form.phone.data
-        # print(email)
-        # print(password)
-        # print(phone)
         user = db.session.execute(db.select(User).where(User.email == email)).scalar()
 
         if user.password == password and user.phone == phone and user.email == email:
