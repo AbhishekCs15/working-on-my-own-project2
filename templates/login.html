@@ -4,13 +4,10 @@
     {% endblock %}
 
     {% block content %}
-
-      <div class="form">
-        <h2 style="color: red">Fill Details</h2>
-        <form method="post" action="{{ url_for('register') }}">
+        <div class="form">
+        <h2 style="color: red">provide necessary details to Log-In</h2>
+        <form method="post" action="{{ url_for('s') }}">
         {{ form.csrf_token }}
-        {{ form.name.label}}<br>
-        {{form.name(size=50)}}<br>
 <!--        {% for err in form.email.errors %}-->
 <!--          <span style="color:red">{{err}}</span>-->
 <!--        {% endfor %}-->
@@ -20,8 +17,7 @@
         {{form.password(size=50)}}<br>
         {{ form.phone.label}}<br>
         {{form.phone(size=50)}}<br>
-        {{ form.submit }}
+         <button type="submit"> Log in</button>
         </form>
-
-      </div>
+        </div>
     {% endblock %}
